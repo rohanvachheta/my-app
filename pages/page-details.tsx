@@ -7,7 +7,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { responseProps } from "../interfaces";
+import { DataEntity, responseProps } from "../interfaces";
 
 interface Props {
   response?: responseProps;
@@ -59,7 +59,7 @@ const PageDetails: NextPage<Props> = ({ response, page: pageProps }) => {
         endMessage={<h4>Nothing more to show</h4>}
       >
         <div className={styles.grid}>
-          {data.map((item: response.data) => (
+          {data.map((item: DataEntity) => (
             <div key={item.id}>
               <Link href={`/page-details/${item.id}`}>
                 <div className={styles.card}>
