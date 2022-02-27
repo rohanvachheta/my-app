@@ -57,7 +57,6 @@ const Post = ({ response }) => {
 export default Post;
 
 Post.getInitialProps = async ({ query }) => {
-  console.log({ query });
   const response = await fetch(
     "https://api.artic.edu/api/v1/exhibitions/" + query.id
   );

@@ -20,7 +20,6 @@ Home.getInitialProps = async () => {
   );
 
   const responseData = await response.json();
-  console.log(responseData, "testi");
 
   return { response: responseData, page: 1 };
 };

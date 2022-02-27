@@ -65,11 +65,13 @@ const PageDetails: NextPage<Props> = ({ response, page: pageProps }) => {
                 <div className={styles.card}>
                   <div>
                     {/* lorem image url */}
-                    <img
-                      src={item.image_url}
-                      alt="card-img"
-                      className={styles.cardImage}
-                    />
+                    {item?.image_url && (
+                      <img
+                        src={item.image_url}
+                        alt="card-img"
+                        className={styles.cardImage}
+                      />
+                    )}
                   </div>
                   <div className={styles.cardTitle}>{item.title}</div>
                   <div className={styles.cardDate}>
