@@ -201,3 +201,14 @@
   width: 100%;
   text-align: center;
 }
+
+/* for mobile device */
+@media (max-width: 600px) {
+  .pageDetailsImage {
+    width: 100%;
+    height: 100%;
+  }
+  .pageDetailsDesc {
+    width: 100%;
+  }
+}
